@@ -346,7 +346,7 @@ FROM mcr.microsoft.com/dotnet/sdk:${VARIANT}
    swa --version
 
    # Azure Dev CLI 설치 여부
-   azd --version
+   azd version
 
    # GitHub CLI 설치 여부
    gh --version
@@ -569,7 +569,7 @@ FROM mcr.microsoft.com/dotnet/sdk:${VARIANT}
 12. 아래 명령어를 통해 Blazor 앱을 Azure Static Web App 인스턴스로 배포합니다.
 
     ```bash
-    swa deploy -d $token
+    swa deploy -d $token --env default
     ```
 
 13. 배포된 앱을 확인합니다.
