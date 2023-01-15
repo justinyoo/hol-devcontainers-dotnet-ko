@@ -37,10 +37,6 @@
    printenv
    ```
 
-6. 코드스페이스 인스턴스를 삭제합니다.
-
-   ![코드스페이스 인스턴스 삭제](./images/lab1-03.png)
-
 
 ## Lab 2. DevContainer 설정 ##
 
