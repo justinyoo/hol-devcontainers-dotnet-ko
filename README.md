@@ -228,7 +228,16 @@ FROM mcr.microsoft.com/dotnet/sdk:${VARIANT}
    }
    ```
 
-8. 위와 같이 정의한 후 `F1` 키룰 눌러 `Codespaces: Rebuild Container` 항목을 선택해 변경사항을 적용한 후 다시 DevContainer를 빌드합니다. 이후 아래 명령어를 통해 제대로 각종 도구가 제대로 설치가 되었는지 확인합니다.
+8. 위와 같이 정의한 후 아래 명령어를 이용해 변경사항을 커밋하고 푸시합니다.
+
+```bash
+git add .
+git commit -m "Add devcontainer settings"
+git push origin
+```
+
+
+`F1` 키룰 눌러 `Codespaces: Rebuild Container` 항목을 선택해 변경사항을 적용한 후 다시 DevContainer를 빌드합니다. 이후 아래 명령어를 통해 제대로 각종 도구가 제대로 설치가 되었는지 확인합니다.
 
 ```bash
 # OS 정보
