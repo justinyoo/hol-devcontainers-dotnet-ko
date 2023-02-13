@@ -6,7 +6,7 @@
       "dockerfile": "./Dockerfile",
       "context": ".",
       "args": {
-        "VARIANT": "7.0"
+        "VARIANT": "6.0"
       }
     },
     
