@@ -1,48 +1,48 @@
 {
   "name": "DevContainer for .NET",
-    
+  
   "build": {
     // 컨테이너 기본 이미지 설정
     "dockerfile": "./Dockerfile",
     "context": ".",
     "args": {
-      "VARIANT": "7.0"
+      "VARIANT": "6.0"
     }
   },
-    
+  
   "forwardPorts": [
     // 포트 포워딩
-    // Azure Function apps
-    7071,
-    // ASP.NET Core Web/API apps
-    5000, 5001,
-    // Azure Static Web App CLI
-    4280
+  // Azure Function apps
+  7071,
+  // ASP.NET Core Web/API apps
+  5000, 5001,
+  // Azure Static Web App CLI
+  4280
   ],
-    
+  
   "features": {
     // 추가 기능
-    // Azure CLI
-    "ghcr.io/devcontainers/features/azure-cli:1": {
+  // Azure CLI
+  "ghcr.io/devcontainers/features/azure-cli:1": {
       "version": "latest",
-      "extensions": "account,alias,deploy-to-azure,functionapp,subscription,webapp",
-      "installBicep": true
+      "extensions": "account,alias,deploy-to-azure,functionapp,subscription,webapp"
     },
-  
+
     // GitHub CLI
     "ghcr.io/devcontainers/features/github-cli:1": {
       "version": "latest"
     },
-  
+
     // node.js
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "lts"
+      "version": "lts",
+      "nodeGypDependencies": true,
+      "nvmInstallPath": "/usr/local/share/nvm"
     },
-  
+
     // common utilities
-    "ghcr.io/devcontainers/features/common-utils:2": {
+    "ghcr.io/devcontainers/features/common-utils:1": {
       "installZsh": true,
-      "configureZshAsDefaultShell": true,
       "installOhMyZsh": true,
       "upgradePackages": true,
       "username": "vscode",
@@ -50,12 +50,12 @@
       "gid": "1000"
     }
   },
-    
+  
   "overrideFeatureInstallOrder": [
     // 추가 기능 설치 순서
     "ghcr.io/devcontainers/features/common-utils"
   ],
-    
+  
   "customizations": {
     "vscode": {
       // 코드스페이스 커스터마이징
@@ -69,7 +69,7 @@
         "VisualStudioExptTeam.vscodeintellicode",
         "GitHub.copilot"
       ],
-
+  
       "settings": {
         // VS Code 환경 설정
         "editor.minimap.enabled": false,
@@ -83,7 +83,7 @@
       }
     }
   },
-  
+
   // DevContainer 사용자 계정
   "remoteUser": "vscode",
 
