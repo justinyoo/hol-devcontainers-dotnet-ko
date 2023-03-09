@@ -6,7 +6,7 @@
     "dockerfile": "./Dockerfile",
     "context": ".",
     "args": {
-      "VARIANT": "6.0"
+      "VARIANT": "7.0"
     }
   },
 
@@ -25,7 +25,8 @@
     // Azure CLI
     "ghcr.io/devcontainers/features/azure-cli:1": {
       "version": "latest",
-      "extensions": "account,alias,deploy-to-azure,functionapp,subscription,webapp"
+      "extensions": "account,alias,deploy-to-azure,functionapp,subscription,webapp",
+      "installBicep": true
     },
 
     // GitHub CLI
