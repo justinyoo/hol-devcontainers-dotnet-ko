@@ -23,26 +23,24 @@
   "features": {
     // 추가 기능
     // Azure CLI
-    "ghcr.io/devcontainers/features/azure-cli:latest": {
+    "ghcr.io/devcontainers/features/azure-cli:1": {
       "version": "latest",
       "extensions": "account,alias,deploy-to-azure,functionapp,subscription,webapp",
       "installBicep": true
     },
   
     // GitHub CLI
-    "ghcr.io/devcontainers/features/github-cli:latest": {
+    "ghcr.io/devcontainers/features/github-cli:1": {
       "version": "latest"
     },
   
     // node.js
-    "ghcr.io/devcontainers/features/node:latest": {
-      "version": "lts",
-      "nodeGypDependencies": true,
-      "nvmInstallPath": "/usr/local/share/nvm"
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
     },
   
     // common utilities
-    "ghcr.io/devcontainers/features/common-utils:latest": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
       "installZsh": true,
       "configureZshAsDefaultShell": true,
       "installOhMyZsh": true,
